@@ -1,0 +1,431 @@
+:root {
+  --ink: #57283f;
+  --rose: #a24e70;
+  --muted: #956f81;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  background:
+    radial-gradient(ellipse at 12% 8%, #fff7fa 0, transparent 34%),
+    radial-gradient(ellipse at 84% 92%, #eeb8d2 0, transparent 38%),
+    linear-gradient(135deg, #f8e8ef, #efd3e1 48%, #f7e3ec);
+  overflow-x: hidden;
+}
+
+.topbar {
+  height: 82px;
+  padding: 0 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 11px;
+  letter-spacing: .22em;
+  font-weight: 700;
+}
+
+.brand-icon {
+  color: #c06b91;
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.music {
+  border: 1px solid #fff9;
+  background: #ffffff70;
+  color: var(--ink);
+  border-radius: 30px;
+  padding: 10px 16px;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  font-size: 14px;
+}
+
+.music span {
+  font-size: 11px;
+  margin-left: 5px;
+}
+
+.hero {
+  max-width: 1120px;
+  min-height: 660px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+.hero-photo {
+  position: absolute;
+  width: 67%;
+  height: 550px;
+  right: 4%;
+  top: 45px;
+  border-radius: 46% 46% 28px 28px;
+  background:
+    linear-gradient(0deg, #57283f18, #57283f00),
+    url("https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=1500&q=90")
+    center / cover;
+  box-shadow: 0 30px 80px #8e476128;
+}
+
+.glass {
+  background: linear-gradient(135deg, #ffffffbd, #ffffff70);
+  border: 1px solid #fff;
+  box-shadow: 0 25px 75px #7f3e5b25, inset 0 1px 0 #fff;
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+
+.hero-card {
+  position: relative;
+  margin-right: 34%;
+  width: 420px;
+  max-width: 92%;
+  padding: 44px 48px 32px;
+  border-radius: 8px 90px 8px 8px;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .21em;
+  color: #a45e7c;
+}
+
+.cake {
+  font-size: 36px;
+  margin: 19px 0 8px;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(54px, 7vw, 76px);
+  line-height: .98;
+  letter-spacing: -.04em;
+  margin: 0 0 16px;
+  font-weight: 500;
+}
+
+h1 em {
+  font-weight: 500;
+  color: #bb638a;
+}
+
+.hero-card p,
+.wish-card p,
+.section-heading p {
+  color: #795466;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.button {
+  display: inline-flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 0;
+  border-radius: 30px;
+  padding: 15px 22px;
+  background: linear-gradient(120deg, #a64e75, #c87599);
+  color: white;
+  letter-spacing: .02em;
+  font: 600 12px "DM Sans", sans-serif;
+  box-shadow: 0 10px 24px #a44d753a;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 28px #a44d7550;
+}
+
+.button span {
+  font-size: 16px;
+}
+
+.signature {
+  margin-top: 27px;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  color: #98607a;
+  font-size: 13px;
+}
+
+.signature span {
+  color: #d2769b;
+}
+
+.side-note {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  writing-mode: vertical-rl;
+  letter-spacing: .3em;
+  font-size: 9px;
+  color: #a96c87;
+}
+
+.page-foot {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px 24px 35px;
+  display: flex;
+  justify-content: space-between;
+  color: #9d7085;
+  font-size: 9px;
+  letter-spacing: .12em;
+}
+
+.page-foot a {
+  color: #9d526f;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.ambient {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.balloon,
+.petal {
+  position: absolute;
+  filter: drop-shadow(0 8px 10px #9c517522);
+  animation: drift 6s ease-in-out infinite;
+}
+
+.b1 { left: 3%; top: 22%; font-size: 50px; }
+.b2 { right: 8%; top: 17%; font-size: 39px; animation-delay: -2s; }
+.b3 { left: 13%; bottom: 12%; font-size: 36px; animation-delay: -4s; }
+.p1 { right: 5%; bottom: 17%; font-size: 34px; }
+.p2 { left: 4%; top: 65%; font-size: 28px; }
+
+@keyframes drift {
+  50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+.memories {
+  max-width: 1040px;
+  margin: 55px auto 25px;
+  padding: 0 24px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 37px;
+}
+
+.section-heading h1 {
+  font-size: 59px;
+  margin: 12px 0;
+}
+
+.section-heading p {
+  margin: 0 auto;
+  max-width: 420px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.photo {
+  margin: 0;
+  padding: 10px;
+  background: #ffffff9c;
+  border: 1px solid #fff;
+  box-shadow: 0 17px 40px #8e476122;
+  transform: rotate(1deg);
+}
+
+.photo:nth-child(2) {
+  transform: rotate(-2deg);
+  margin-top: 35px;
+}
+
+.photo:nth-child(3) {
+  transform: rotate(2deg);
+  margin-top: -8px;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.photo.tall img {
+  height: 280px;
+}
+
+.photo figcaption {
+  padding: 13px 6px 7px;
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  color: #7d4b64;
+}
+
+.photo figcaption span {
+  float: right;
+  color: #cc7195;
+}
+
+.page-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 35px 0;
+}
+
+.secondary {
+  background: #ffffffb3;
+  color: #8c4b69;
+  border: 1px solid white;
+}
+
+.wish-layout {
+  max-width: 1050px;
+  min-height: 640px;
+  margin: 5px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 24px;
+}
+
+.wish-photo {
+  width: 60%;
+  height: 530px;
+  background:
+    linear-gradient(0deg, #56254022, #56254000),
+    url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1300&q=90")
+    center / cover;
+  border-radius: 220px 220px 14px 14px;
+  box-shadow: 0 25px 70px #8e476130;
+}
+
+.wish-card {
+  position: relative;
+  width: 405px;
+  margin-left: -120px;
+  border-radius: 8px 75px 8px 8px;
+  padding: 38px 40px;
+  text-align: center;
+}
+
+.wish-card h1 {
+  font-size: 60px;
+}
+
+.candles {
+  font-size: 27px;
+  margin: 18px 0 8px;
+  letter-spacing: 5px;
+}
+
+.candles span {
+  display: inline-block;
+  animation: flicker 1.4s infinite alternate;
+}
+
+.candles span:nth-child(2) { animation-delay: .3s; }
+.candles span:nth-child(3) { animation-delay: .7s; }
+
+@keyframes flicker {
+  to { filter: brightness(1.2); transform: translateY(-2px); }
+}
+
+.wish-message {
+  min-height: 24px !important;
+  color: #a24e70 !important;
+  font-weight: 700;
+}
+
+.rose-row {
+  font-size: 19px;
+  margin: 12px;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #9b5273;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.confetti {
+  position: fixed;
+  z-index: 20;
+  top: -15px;
+  width: 9px;
+  height: 13px;
+  border-radius: 3px;
+  animation: fall 3s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(700deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .topbar { height: 68px; padding: 0 20px; }
+  .hero { min-height: 710px; align-items: flex-end; padding-bottom: 50px; }
+  .hero-photo { width: 90%; height: 420px; right: 5%; top: 15px; }
+  .hero-card { margin: 0; width: 390px; padding: 35px 28px 27px; }
+  .side-note { display: none; }
+  .b1 { left: 1%; top: 16%; }
+  .b2 { right: 2%; top: 20%; }
+  .memories { margin: 35px auto; }
+  .section-heading h1 { font-size: 48px; }
+  .gallery { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .photo img, .photo.tall img { height: 190px; }
+  .photo:first-child { grid-column: span 2; }
+  .photo:first-child img { height: 230px; }
+  .photo:nth-child(2), .photo:nth-child(3) { margin: 0; }
+  .wish-layout { min-height: 760px; flex-direction: column; padding-top: 15px; }
+  .wish-photo { width: 100%; height: 390px; }
+  .wish-card { width: min(94%, 400px); margin: -100px 0 0; padding: 30px 24px; }
+  .wish-card h1 { font-size: 53px; }
+  .page-foot { padding: 18px 20px 25px; }
+  .page-foot span:nth-child(2) { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
