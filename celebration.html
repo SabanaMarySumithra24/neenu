@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Make a Birthday Wish</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient">
+    <span class="balloon b1">🎈</span>
+    <span class="balloon b2">🎈</span>
+    <span class="petal p1">🌹</span>
+    <span class="petal p2">🌸</span>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-icon">✦</span> A LITTLE MAGIC</a>
+    <button class="music" data-music>♫ <span>Music</span></button>
+  </header>
+
+  <main class="wish-layout">
+    <div class="wish-photo" role="img" aria-label="Birthday cake"></div>
+
+    <section class="glass wish-card">
+      <span class="eyebrow">CLOSE YOUR EYES & MAKE A WISH</span>
+      <div class="candles" aria-label="Birthday candles">
+        <span>🕯️</span><span>🕯️</span><span>🕯️</span>
+      </div>
+      <h1>Make a<br><em>wish.</em></h1>
+      <p>May this next trip around the sun bring you the kind of happiness that stays long after the candles go out.</p>
+      <button class="button" id="wish-button">Blow out the candles <span>✦</span></button>
+      <p id="wish-message" class="wish-message" aria-live="polite"></p>
+      <div class="rose-row">🌹　🌸　🌹</div>
+      <a class="text-link" href="index.html">Start the birthday story again ↗</a>
+    </section>
+  </main>
+
+  <footer class="page-foot">
+    <span>03 — 03</span>
+    <span>Wishing you all the lovely things</span>
+    <a href="memories.html">← PREVIOUS</a>
+  </footer>
+
+  <audio id="birthday-audio" loop src="https://cdn.pixabay.com/audio/2022/10/25/audio_946b3f3a4d.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
